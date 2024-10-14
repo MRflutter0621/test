@@ -9,7 +9,9 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('New App'),
         backgroundColor: Colors.redAccent,
-      ),
+      ),body: Container(
+      color: Colors.amber,
+    ),
     );
   }
 }
