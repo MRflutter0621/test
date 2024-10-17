@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.redAccent,
       ),
       body: Container(
-        color: Colors.amber,
+        color: Colors.greenAccent,
       ),
     );
   }
