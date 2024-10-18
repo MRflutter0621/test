@@ -8,11 +8,15 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('New App'),
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Colors.greenAccent,
       ),
       body: Container(
-        color: Colors.greenAccent,
-      ),
+          decoration: const BoxDecoration(
+        gradient: LinearGradient(
+            colors: [Colors.blueGrey, Colors.greenAccent, Colors.blueGrey],
+            begin: Alignment.bottomRight,
+            end: Alignment.topRight),
+      )),
     );
   }
 }
