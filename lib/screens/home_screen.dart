@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('New App'),
-          backgroundColor: Colors.greenAccent,
+          backgroundColor: const Color.fromARGB(255, 150, 244, 199),
         ),
         body: Container(
           height: double.infinity,
@@ -35,10 +35,10 @@ class HomeScreen extends StatelessWidget {
                 height: 450,
                 width: 350,
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: const Color.fromARGB(255, 207, 240, 207),
                     boxShadow: [
                       BoxShadow(
-                        color: const Color.fromARGB(255, 219, 214, 214)
+                        color: const Color.fromARGB(255, 41, 40, 40)
                             .withOpacity(0.5),
                         spreadRadius: 5,
                         blurRadius: 7,
@@ -50,6 +50,9 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    const SizedBox(
+                      height: 30,
+                    ),
                     SizedBox(
                         height: 150,
                         width: 150,
@@ -57,9 +60,33 @@ class HomeScreen extends StatelessWidget {
                           'assets/image/profile.png',
                           fit: BoxFit.cover,
                         )),
-                    TextField(),
-                    TextField(),
-                    ElevatedButton(onPressed: () {}, child: Text('login'))
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            hintText: '  user id',
+                            border: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(25)))),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            hintText: '  password',
+                            border: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(25)))),
+                      ),
+                    ),
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(elevation: 5),
+                        onPressed: () {},
+                        child: const Text('login')),
+                    const SizedBox(
+                      height: 30,
+                    )
                   ],
                 ),
               )
