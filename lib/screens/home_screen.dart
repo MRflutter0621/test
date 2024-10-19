@@ -47,6 +47,21 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ],
                     borderRadius: BorderRadius.circular(30)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    SizedBox(
+                        height: 150,
+                        width: 150,
+                        child: Image.asset(
+                          'assets/image/profile.png',
+                          fit: BoxFit.cover,
+                        )),
+                    TextField(),
+                    TextField(),
+                    ElevatedButton(onPressed: () {}, child: Text('login'))
+                  ],
+                ),
               )
             ],
           ),
